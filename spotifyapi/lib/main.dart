@@ -34,20 +34,26 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SPOTIFY API',
-            style: TextStyle(fontSize: 24, color: Colors.white)),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 11, 68, 114),
-        leading: const Row(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              image: AssetImage('assets/images/mailo.png'),
-              width: 100,
-              height: 100,
-              fit: BoxFit.cover,
+            const Text('SPOTIFY API',
+                style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold)),
+            Container(
+              margin: const EdgeInsets.only(left: 10),
+              child: const Image(
+                image: AssetImage('assets/images/mailo.png'),
+                width: 60,
+                height: 60,
+                fit: BoxFit.cover,
+              ),
             ),
           ],
         ),
+        backgroundColor: const Color.fromARGB(255, 11, 68, 114),
       ),
       backgroundColor: const Color.fromARGB(255, 11, 68, 114),
       body: Center(
